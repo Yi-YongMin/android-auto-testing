@@ -27,8 +27,8 @@
 
 - 또한 환경변수 확인을 위해서 CMD,bash,powershell에서 각기 다른 문법 사용
 
-  > CMD: %ANDROID_HOME%
-  > Git Bash: $ANDROID_HOME
+  > CMD: %ANDROID_HOME%  
+  > Git Bash: $ANDROID_HOME  
   > PowerShell: $Env:ANDROID_HOME
 
 - 또한 appium-doctor를 통해 문제점 확인
@@ -37,3 +37,20 @@
 2. android , apkanlayzer.bat 누락 -> android studio에서 Command-line Tools (latest) 설치
 
 여전히 Start Session 실패 상태.
+
+### 250723(Wed)
+
+- appium과 드라이버간 호환성 문제였던 것으로 확인.
+<pre><code>npm uninstall -g appium
+npm install -g appium@latest</code></pre>
+- 그리고 Appium inspector에서 JSON Representation 은 하기와 같이 채우기. -> appium 버전1에서는 path에 /wd/hub로 Remote Path를 설정해야했으나 , 버전2부터는 /로 변경
+  <pre><code>
+  {
+  "platformName": "Android",
+  "appium:deviceName": "R3CTC0389GV",
+  "appium:automationName": "UiAutomator2",
+  "appium:appPackage": "com.android.settings",
+  "appium:appActivity": ".Settings",
+  "appium:noReset": true
+  }
+</code></pre>
