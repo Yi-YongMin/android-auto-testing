@@ -1,6 +1,7 @@
 # 안드로이드 앱 자동화 테스트 (Appium + Jenkins)
 
 이 프로젝트는 Appium + Jenkins 을 활용한 UI자동화 테스트를 위해 작성되었습니다.
+결과물 -> [자동화 기초 영상 URL](https://drive.google.com/file/d/1G317ouKi_0tnES5l8b1pTdP1qLm65Bb0/view?usp=sharing)
 
 ## Structure
 
