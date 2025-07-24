@@ -1,13 +1,12 @@
-# 안드로이드 앱 자동화 테스트 (Appium + Jenkins)
+# 안드로이드 앱 자동화 테스트 (Appium)
 
-이 프로젝트는 Appium + Jenkins 을 활용한 UI자동화 테스트를 위해 작성되었습니다.
+이 프로젝트는 Appium 을 활용한 UI자동화 테스트를 위해 작성되었습니다.
 결과물 -> [자동화 기초 영상 URL](https://drive.google.com/file/d/1G317ouKi_0tnES5l8b1pTdP1qLm65Bb0/view?usp=sharing)
 
 ## Structure
 
-- `test_cases/`: Appium 기반 파이썬 테스트 스크립트
-- `docs/`: 아키텍처 다이어그램과 테스트 결과 예시
-- `Jenkinsfile`: CI 파이프라인 스크립트
+- `test_cases/`: Appium 기반 파이썬 테스트 스크립트 (준비 기간이 빠듯하여 한 가지로 대체)
+- 캐시워크 첫 화면에서 elementId + resource-id를 통한 이벤트 제어와 xy좌표를 통한 이벤트 제어
 
 ### 250721(Mon)
 
