@@ -60,3 +60,4 @@ npm install -g appium@latest</code></pre>
 - 실제로 클릭이벤트 및 광고창 닫기 자동화까지 스크립트 완성
 - 한가지 알아낸 점은 실제 터치 시뮬레이션을 수행하기 때문에 ADB 명령을 전달하고 반응을 대기하는 과정에서 0.1초로 설정한 것보다 더 긴 지연이 발생함.
 - 하지만 기본적인 자동화는 완성
+  [자동화 기초 영상 URL](https://drive.google.com/file/d/1G317ouKi_0tnES5l8b1pTdP1qLm65Bb0/view?usp=sharing)
