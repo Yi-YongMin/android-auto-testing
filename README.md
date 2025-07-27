@@ -45,14 +45,14 @@
 npm install -g appium@latest</code></pre>
 - 그리고 Appium inspector에서 JSON Representation 은 하기와 같이 채우기. -> appium 버전1에서는 path에 /wd/hub로 Remote Path를 설정해야했으나 , 버전2부터는 /로 변경
 <pre><code>
-  {
+{
   "platformName": "Android",
-  "appium:deviceName": "R3CTC0389GV",
+  "appium:deviceName": "실제디바이스ID",
   "appium:automationName": "UiAutomator2",
-  "appium:appPackage": "com.android.settings",
-  "appium:appActivity": ".Settings",
+  "appium:appPackage": "com.cashwalk.cashwalk",
+  "appium:appActivity": ".v2.view.main.MainActivity2",
   "appium:noReset": true
-  }
+}
 </code></pre>
 
 ### 250724(Thur)
@@ -61,3 +61,8 @@ npm install -g appium@latest</code></pre>
 - 한가지 알아낸 점은 실제 터치 시뮬레이션을 수행하기 때문에 ADB 명령을 전달하고 반응을 대기하는 과정에서 0.1초로 설정한 것보다 더 긴 지연이 발생함.
 - 하지만 기본적인 자동화는 완성
   [자동화 기초 영상 URL](https://drive.google.com/file/d/1G317ouKi_0tnES5l8b1pTdP1qLm65Bb0/view?usp=sharing)
+
+### 250727(Sun)
+
+- 단순 xy좌표 클릭으로 coinbox 클릭이 아닌 , elementId를 통한 탐색으로 클릭.
+- 만약 더 이상 리워드가 존재하지 않으면 클릭을 종료하는 로직까지 추가
