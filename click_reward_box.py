@@ -15,7 +15,7 @@ options.no_reset = True
 driver = webdriver.Remote("http://127.0.0.1:4723", options=options)
 time.sleep(2)
 
-pause_time = 0.05
+pause_time = 0.1
 max_clicks = 100
 click_count = 0
 
@@ -23,23 +23,28 @@ click_count = 0
 COINBOX_ID = "com.cashwalk.cashwalk:id/coinbox"
 AD_CLOSE_ID = "com.cashwalk.cashwalk:id/ivClose"
 
+AD_CLOSE_IDS = [
+    "com.cashwalk.cashwalk:id/ivClose",          # 기존 ID
+    "com.cashwalk.cashwalk:id/iv_ad_close_btn"   # 초기화 후 등장하는 새 ID
+]
+
 while click_count < max_clicks:
     try:
-        # 1. 광고 닫기 버튼이 화면에 나타났는지 먼저 확인
-        ad_close_buttons = driver.find_elements(by="id", value=AD_CLOSE_ID)
+        ad_close_buttons = []
+        for close_id in AD_CLOSE_IDS:
+            ad_close_buttons = driver.find_elements(by="id", value=close_id)
+            if ad_close_buttons:
+                break  # 발견되면 중단
+
         if ad_close_buttons:
-            ad_button = ad_close_buttons[0]
-            bounds = ad_button.rect
+            btn = ad_close_buttons[0]
+            bounds = btn.rect
             x = bounds['x'] + bounds['width'] // 2
             y = bounds['y'] + bounds['height'] // 2
-
-            print("※※※※ 광고 감지됨. 닫기 버튼 클릭 중 ※※※※")
-            driver.execute_script("mobile: clickGesture", {
-                "x": x,
-                "y": y
-            })
+            print("※※※ 광고 감지됨. 닫기 버튼 클릭")
+            driver.execute_script("mobile: clickGesture", {"x": x, "y": y})
             time.sleep(1)
-            continue  # 광고 닫은 후 루프 재시작
+            continue
 
         # 2. coinbox가 화면에 존재하는지 확인
         coinboxes = driver.find_elements(by="id", value=COINBOX_ID)
