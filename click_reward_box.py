@@ -15,7 +15,7 @@ options.no_reset = True
 driver = webdriver.Remote("http://127.0.0.1:4723", options=options)
 time.sleep(2)
 
-pause_time = 0.1
+pause_time = 0.05
 max_clicks = 100
 click_count = 0
 

@@ -1,7 +1,7 @@
 # 안드로이드 앱 자동화 테스트 (Appium)
 
 이 프로젝트는 Appium 을 활용한 UI자동화 테스트를 위해 작성되었습니다.
-결과물 -> [자동화 기초 영상 URL](https://drive.google.com/file/d/1ghwFH9v1hyFK0mCN6Rw6DHzJ4pZr1WlK/view?usp=drive_link)
+결과물 -> [자동화 기초 영상 URL](https://drive.google.com/file/d/1Q5EhVsPalGPAX3cr6sZsx4P8GHSIILBt/view?usp=sharing)
 
 ## Structure
 
@@ -60,7 +60,7 @@ npm install -g appium@latest</code></pre>
 - 실제로 클릭이벤트 및 광고창 닫기 자동화까지 스크립트 완성
 - 한가지 알아낸 점은 실제 터치 시뮬레이션을 수행하기 때문에 ADB 명령을 전달하고 반응을 대기하는 과정에서 0.1초로 설정한 것보다 더 긴 지연이 발생함.
 - 하지만 기본적인 자동화는 완성
-  [자동화 기초 영상 URL](https://drive.google.com/file/d/1ghwFH9v1hyFK0mCN6Rw6DHzJ4pZr1WlK/view?usp=drive_link)
+  [자동화 기초 영상 URL](https://drive.google.com/file/d/1Q5EhVsPalGPAX3cr6sZsx4P8GHSIILBt/view?usp=sharing)
 
 ### 250727(Sun)
 
